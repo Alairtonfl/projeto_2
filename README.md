@@ -1,4 +1,4 @@
-# Hel-heim
+# Project
 ## _A quiz app designed for a college project_
 
 ## Features
@@ -15,7 +15,7 @@
 ![UseCases](./documentation/Flow.png "Flow start match")
 ## Tech
 
-Hel-heim uses a number of open source projects to work properly:
+This project uses a number of open source projects to work properly:
 
 - [Node.js](https://nodejs.org) - evented I/O for the backend
 - [Express](https://expressjs.com) - fast node.js network app framework
