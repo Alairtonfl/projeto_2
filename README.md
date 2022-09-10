@@ -11,7 +11,7 @@
 ### Database Model
 ![Database Model](./documentation/DatabaseModel.png "Database Model")
 
-### Flow Hel-heim
+### Flow
 ![UseCases](./documentation/Flow.png "Flow start match")
 ## Tech
 
