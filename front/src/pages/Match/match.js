@@ -60,10 +60,37 @@ export default {
             this.data.answerD = Response.data.answers[3].answer
             this.data.answerDId = Response.data.answers[3].id
           }
-        })
+        } )
+
+        
       },
       answer(questionId, answerId){
-        console.log(questionId, answerId);
+        const data = {
+          questionId, 
+          answerId
+        }
+        const token = JSON.parse(localStorage.getItem("Token"))
+        api.post("verifyanswer", data, {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+          }
+        }).then((Response) => {
+          if (Response.data.question != null) {
+            this.data.question = Response.data.question;
+            this.data.questionId = Response.data.id;
+            this.data.theme = Response.data.theme;
+            this.data.answerA = Response.data.answers[0].answer
+            this.data.answerAId = Response.data.answers[0].id
+            this.data.answerB = Response.data.answers[1].answer
+            this.data.answerBId = Response.data.answers[1].id
+            this.data.answerC = Response.data.answers[2].answer
+            this.data.answerCId = Response.data.answers[2].id
+            this.data.answerD = Response.data.answers[3].answer
+            this.data.answerDId = Response.data.answers[3].id
+          } else {
+            alert("Resposta incorreta")
+          }
+        })
       }
     },
   }

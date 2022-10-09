@@ -9,9 +9,9 @@
             </label>
            <div class="d-grid gap-2">
                 <button type="button" class="btn btn-secondary btn-lg" @click.prevent="answer(data.questionId, data.answerAId)"> <label id="A">A</label> {{data.answerA}}</button>
-                <button type="button" class="btn btn-secondary btn-lg"> <label id="B">B</label> {{data.answerB}} </button>
-                <button type="button" class="btn btn-secondary btn-lg"><label id="C">C</label> {{data.answerC}}</button>
-                <button type="button" class="btn btn-secondary btn-lg"><label id="D">D</label> {{data.answerD}}</button>
+                <button type="button" class="btn btn-secondary btn-lg" @click.prevent="answer(data.questionId, data.answerBId)"> <label id="B">B</label> {{data.answerB}} </button>
+                <button type="button" class="btn btn-secondary btn-lg" @click.prevent="answer(data.questionId, data.answerCId)"><label id="C">C</label> {{data.answerC}}</button>
+                <button type="button" class="btn btn-secondary btn-lg" @click.prevent="answer(data.questionId, data.answerDId)"><label id="D">D</label> {{data.answerD}}</button>
             </div>
         </div>
         <div>
