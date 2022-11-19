@@ -4,6 +4,10 @@
             <img src="./icons8-back-64.png" alt="">
         </button>
         <div class="mb-3">
+            <label class="form-control">
+                <h2> Pegunta valendo {{prize}} reais</h2>
+                <h2> Parar recebe {{prizeWin}} reais</h2>
+            </label>
             <label class="form-control" id="exampleFormControlTextarea1" rows="3">
                 {{data.question}}
             </label>
@@ -19,6 +23,8 @@
                 <img src="./baralho.png" style="height: 40px; margin-left: 5px;" alt="">
                 Remover
             </button>
+                <button type="button" id="skipQuestion" class="btn btn-success" @click.prevent="spikQuestion()">Pular</button>
+                <button type="button" id="stopGame" class="btn btn-danger" @click.prevent="stopGame()">Parar</button>
         </div>
     </div>
 </template>
@@ -81,6 +87,22 @@
         border-radius: 8%;
 
         color: rgb(2, 2, 2);
+    }
+
+    #skipQuestion{
+        position: absolute;
+        height: 70px;
+        width: 70px;
+        top: 25%;
+        right: 2%;
+    }
+
+    #stopGame{
+        position: absolute;
+        height: 70px;
+        width: 70px;
+        top: 35%;
+        right: 2%;
     }
    
 </style>
